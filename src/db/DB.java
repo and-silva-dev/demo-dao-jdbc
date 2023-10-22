@@ -10,7 +10,9 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class DB {
-
+	/**
+	 * Responsável por conectar a internet
+	 */
 	private static Connection conn = null;
 	
 	public static Connection getConnection() {
@@ -26,7 +28,9 @@ public class DB {
 		}
 		return conn;
 	}
-	
+	/**
+	 * Responsável por encerrar a conexão
+	 */
 	public static void closeConnection() {
 		if (conn != null) {
 			try {

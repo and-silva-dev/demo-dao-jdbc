@@ -4,6 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * Classe Vendedor implementa Serializable que faz com que nossos objetos possam
+ * ser transformados em sequência de bytes . É necessário fazer essa
+ * implementação caso seja necessário que os objetos sejam gravados em arquivo,
+ * trafegado em rede e etc...
+ */
 public class Seller implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -14,6 +20,7 @@ public class Seller implements Serializable {
 	private Double baseSalary;
 	private Department department;
 
+//Construtores
 	public Seller() {
 
 	}
@@ -27,6 +34,7 @@ public class Seller implements Serializable {
 		this.department = department;
 	}
 
+//Métodos get e set , hashCode , equals e toString
 	public Integer getId() {
 		return id;
 	}

@@ -3,12 +3,19 @@ package model.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * Classe Departamento implementa Serializable que faz com que nossos objetos
+ * possam ser transformados em sequência de bytes . É necessário fazer essa
+ * implementação caso seja necessário que os objetos sejam gravados em arquivo,
+ * trafegado em rede e etc...
+ */
 public class Department implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 
+	//Construtores
 	public Department() {
 	}
 
@@ -17,6 +24,7 @@ public class Department implements Serializable {
 		this.name = name;
 	}
 
+	// Métodos get e set , hashCode , equals e toString
 	public Integer getId() {
 		return id;
 	}
@@ -55,6 +63,4 @@ public class Department implements Serializable {
 		return "Department [id=" + id + ", name=" + name + "]";
 	}
 
-	
-	
 }
